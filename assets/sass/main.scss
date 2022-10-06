@@ -1,0 +1,162 @@
+$PrimaryRed: hsl(1, 90%, 64%);
+$PrimaryBlue: hsl(219, 85%, 26%);
+$NeutralWhite: hsl(0, 0%, 100%);
+$NeutralVerylightgrayishblue: hsl(210, 60%, 98%);
+$NeutralLightgrayishblue1: hsl(211, 68%, 94%);
+$NeutralLightgrayishblue2: hsl(205, 33%, 90%);
+$NeutralGrayishblue: hsl(219, 14%, 63%);
+$NeutralDarkgrayishblue: hsl(219, 12%, 42%);
+$NeutralVerydarkblue: hsl(224, 21%, 14%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: $NeutralVerylightgrayishblue;
+}
+
+.card {
+    margin: 0 auto;
+    max-width: 40rem;
+    height: 100vh;
+    padding: 1.2rem 1rem;
+    background: $NeutralWhite;
+
+    header {
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-size: 1.2em;
+            font-weight: 800;
+
+            #amountNotif {
+                margin-left: 0.3rem;
+                padding: 0.2rem 0.6rem;
+                background: $PrimaryBlue;
+                font-size: 0.9em;
+                font-weight: 700;
+                color: $NeutralLightgrayishblue1;
+                border-radius: 8px;
+            }
+
+            .hidden {
+                display: none;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 0.8em;
+            color: $NeutralDarkgrayishblue;
+
+            &:hover {
+                color: $NeutralVerydarkblue;
+            }
+        }
+    }
+
+    main {
+        .notifCard {
+            margin-top: 0.5rem;
+            padding: 1rem;
+            display: flex;
+            border-radius: 10px;
+
+            .profil {
+                width: 20%;
+
+                img {
+                    width: 2.5rem;
+                }
+            }
+
+            .content {
+                width: 75%;
+
+                p {
+                    font-size: 0.8em;
+                    font-weight: 700;
+                    color: $NeutralDarkgrayishblue;
+
+                    a {
+                        text-decoration: none;
+                        color: $NeutralVerydarkblue;
+                        font-weight: 800;
+
+                        &:hover {
+                            color: $PrimaryBlue;
+                        }
+                    }
+                }
+
+                p.time {
+                    margin-top: 0.2rem;
+                    color: $NeutralGrayishblue;
+                }
+
+                .message {
+                    margin-top: 1rem;
+                    padding: 1rem;
+                    border: 1px solid $NeutralGrayishblue;
+                    border-radius: 5px;
+                    
+                    p {
+                        font-weight: 600;
+                    }
+
+                    &:hover {
+                        background: $NeutralLightgrayishblue1;
+                        border-color: transparent;
+                    }
+                }
+            }
+
+            .content-image {
+                img {
+                    width: 2.5rem;
+                }
+            }
+        }
+
+        .isTrueNotif {
+            background: $NeutralVerylightgrayishblue;
+        }
+    }
+}
+
+@media (min-width: 760px) {
+    body {
+        padding: 2rem 0;
+    }
+
+    .card {
+        height: 90vh;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        main {
+            max-height: 76vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: $NeutralLightgrayishblue1 $NeutralVerylightgrayishblue;
+            scrollbar-gutter: stable;
+
+            .notifCard {
+                .profil {
+                    width: 10%;
+                }
+        
+                .content {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

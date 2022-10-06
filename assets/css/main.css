@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: hsl(210deg, 60%, 98%);
+}
+
+.card {
+  margin: 0 auto;
+  max-width: 40rem;
+  height: 100vh;
+  padding: 1.2rem 1rem;
+  background: hsl(0deg, 0%, 100%);
+}
+.card header {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card header h2 {
+  font-size: 1.2em;
+  font-weight: 800;
+}
+.card header h2 #amountNotif {
+  margin-left: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  background: hsl(219deg, 85%, 26%);
+  font-size: 0.9em;
+  font-weight: 700;
+  color: hsl(211deg, 68%, 94%);
+  border-radius: 8px;
+}
+.card header h2 .hidden {
+  display: none;
+}
+.card header a {
+  text-decoration: none;
+  font-size: 0.8em;
+  color: hsl(219deg, 12%, 42%);
+}
+.card header a:hover {
+  color: hsl(224deg, 21%, 14%);
+}
+.card main .notifCard {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  border-radius: 10px;
+}
+.card main .notifCard .profil {
+  width: 20%;
+}
+.card main .notifCard .profil img {
+  width: 2.5rem;
+}
+.card main .notifCard .content {
+  width: 75%;
+}
+.card main .notifCard .content p {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: hsl(219deg, 12%, 42%);
+}
+.card main .notifCard .content p a {
+  text-decoration: none;
+  color: hsl(224deg, 21%, 14%);
+  font-weight: 800;
+}
+.card main .notifCard .content p a:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.card main .notifCard .content p.time {
+  margin-top: 0.2rem;
+  color: hsl(219deg, 14%, 63%);
+}
+.card main .notifCard .content .message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid hsl(219deg, 14%, 63%);
+  border-radius: 5px;
+}
+.card main .notifCard .content .message p {
+  font-weight: 600;
+}
+.card main .notifCard .content .message:hover {
+  background: hsl(211deg, 68%, 94%);
+  border-color: transparent;
+}
+.card main .notifCard .content-image img {
+  width: 2.5rem;
+}
+.card main .isTrueNotif {
+  background: hsl(210deg, 60%, 98%);
+}
+
+@media (min-width: 760px) {
+  body {
+    padding: 2rem 0;
+  }
+  .card {
+    height: 90vh;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .card main {
+    max-height: 76vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(211deg, 68%, 94%) hsl(210deg, 60%, 98%);
+    scrollbar-gutter: stable;
+  }
+  .card main .notifCard .profil {
+    width: 10%;
+  }
+  .card main .notifCard .content {
+    width: 90%;
+  }
+}/*# sourceMappingURL=main.css.map */
